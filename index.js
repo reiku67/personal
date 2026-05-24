@@ -21,7 +21,17 @@ function parseMeta(text) {
 }
 
 async function discoverPosts() {
-  // Python's http.server returns a directory listing with <a href="file.txt">
+  // Primero: intentar leer posts/index.json (lo genera el workflow de Pages
+  // o se puede mantener a mano). Fallback: parsear el listado de directorio
+  // que sirve Python http.server en local.
+  try {
+    const res = await fetch('posts/index.json');
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data)) return data.map(s => s.endsWith('.txt') ? s : s + '.txt');
+    }
+  } catch {}
+
   const html = await fetch('posts/').then(r => r.text());
   const matches = [...html.matchAll(/href="([^"]+\.txt)"/g)];
   return matches.map(m => decodeURIComponent(m[1]));

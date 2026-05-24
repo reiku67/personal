@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate posts/index.json
+        run: |
+          cd posts
+          printf '[\n' > index.json
+          first=1
+          for f in *.txt; do
+            [ -e "$f" ] || continue
+            slug="${f%.txt}"
+            if [ $first -eq 1 ]; then
+              printf '  "%s"' "$slug" >> index.json
+              first=0
+            else
+              printf ',\n  "%s"' "$slug" >> index.json
+            fi
+          done
+          printf '\n]\n' >> index.json
+          cat index.json
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
