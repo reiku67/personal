@@ -1,0 +1,126 @@
+:root {
+  --bg: #0e0e0e;
+  --fg: #e8e8e8;
+  --muted: #8a8a8a;
+  --accent: #d4d4d4;
+  --border: #222;
+  --chip-bg: #1a1a1a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.back:hover { color: var(--fg); }
+
+.meta {
+  display: flex;
+  gap: 12px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.meta .topic { text-transform: lowercase; }
+
+article h2.post-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.tts-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.tts-btn {
+  background: var(--chip-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+.tts-btn:hover { border-color: #3a3a3a; }
+.tts-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.tts-voice {
+  background: var(--chip-bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 12px;
+  max-width: 220px;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0 24px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.body p { margin-bottom: 16px; }
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+  padding: 48px 0;
+}
+
+.attachment {
+  margin-top: 40px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+}
+.attachment-label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.attachment a {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 15px;
+}
+.attachment a:hover { color: #fff; }

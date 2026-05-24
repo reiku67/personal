@@ -1,0 +1,158 @@
+:root {
+  --bg: #0e0e0e;
+  --fg: #e8e8e8;
+  --muted: #8a8a8a;
+  --border: #222;
+  --chip-bg: #1a1a1a;
+  --chip-active: #2d2d2d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+header { margin-bottom: 48px; }
+
+h1 {
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 14px;
+  font-family: ui-monospace, monospace;
+}
+
+.controls {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  font-family: ui-monospace, monospace;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.control-label { color: var(--muted); }
+
+select {
+  background: var(--chip-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  background: var(--chip-bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: all 0.12s;
+  user-select: none;
+}
+
+.chip:hover { color: var(--fg); }
+
+.chip.active {
+  background: var(--chip-active);
+  color: var(--fg);
+  border-color: #3a3a3a;
+}
+
+.post-link {
+  display: block;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-link:hover h2 { color: #fff; }
+
+.post-link .meta {
+  display: flex;
+  gap: 12px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.post-link .meta .topic { text-transform: lowercase; }
+
+.post-link h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.12s;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+  padding: 48px 0;
+}
+
+.post-link { position: relative; }
+
+.tts-inline {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+}
+.post-link:hover .tts-inline { opacity: 1; }
+.tts-inline:hover {
+  color: var(--fg);
+  border-color: #3a3a3a;
+}

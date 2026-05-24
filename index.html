@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>w/o fluff</title>
+  <link rel="stylesheet" href="index.css?v=2">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>INOSTROZA</h1>
+      <div class="sub">NO FLUFF</div>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <span class="control-label">orden:</span>
+        <select id="sort">
+          <option value="desc">más reciente primero</option>
+          <option value="asc">más antiguo primero</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <span class="control-label">tópicos:</span>
+        <div class="topics" id="topics"></div>
+      </div>
+    </div>
+
+    <main id="posts"></main>
+  </div>
+
+  <script src="tts.js?v=2"></script>
+  <script src="index.js?v=6"></script>
+</body>
+</html>
