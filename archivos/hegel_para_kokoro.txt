@@ -1,3 +1,8 @@
+@title: Fenomenología del Espíritu (extractos)
+@autor: G.W.F. Hegel
+@tipo: libro
+@year: 1807
+
 TÍTULO: I. La certeza sensorial
 
 Esta diferencia de la esencia y del ejemplo, de la inmediatez y de la mediación, no la hacemos sólo nosotros, sino que la encontramos en la certeza sensorial misma; y es en la forma en que esté en la certeza, no según nosotros la acabamos de determinar, como se habrá de registrar tal diferencia. En la certeza hay algo en cuanto lo simple que es de modo inmediato, o bien, puesto como la esencia: el objeto; pero también hay lo otro, en cuanto lo inesencial y mediado, que está en ella, no en sí, sino en virtud de otro, hay yo, un saber que sabe al objeto sólo porque éste es, y un saber que puede ser o no ser. Mientras que el objeto es lo verdadero, y la esencia; él es, y es indiferente a si es sabido o no; permanece aunque no sea sabido; mientras que el saber no es si no hay objeto.

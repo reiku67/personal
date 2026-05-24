@@ -31,16 +31,9 @@ h1 {
   font-size: 28px;
   font-weight: 500;
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-h1 a { color: inherit; text-decoration: none; }
-
-.sub {
-  color: var(--muted);
-  font-size: 14px;
-  font-family: ui-monospace, monospace;
   margin-bottom: 16px;
 }
+h1 a { color: inherit; text-decoration: none; }
 
 .tabs {
   display: flex;
@@ -67,7 +60,7 @@ h1 a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
-  margin-bottom: 40px;
+  margin: 32px 0 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -82,7 +75,6 @@ h1 a { color: inherit; text-decoration: none; }
   gap: 8px;
   flex-wrap: wrap;
 }
-
 .control-label { color: var(--muted); }
 
 select {
@@ -113,41 +105,47 @@ select {
   transition: all 0.12s;
   user-select: none;
 }
-
 .chip:hover { color: var(--fg); }
-
 .chip.active {
   background: var(--chip-active);
   color: var(--fg);
   border-color: #3a3a3a;
 }
 
-.post-link {
+.fuente-link {
   display: block;
   padding: 24px 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
+.fuente-link:hover h2 { color: #fff; }
 
-.post-link:hover h2 { color: #fff; }
-
-.post-link .meta {
+.fuente-link .meta {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   font-family: ui-monospace, monospace;
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 8px;
 }
 
-.post-link .meta .topic { text-transform: lowercase; }
-
-.post-link h2 {
+.fuente-link h2 {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.01em;
   transition: color 0.12s;
+}
+
+.fuente-link .autor {
+  font-family: ui-serif, Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 4px;
 }
 
 .empty {
@@ -157,8 +155,6 @@ select {
   font-size: 14px;
   padding: 48px 0;
 }
-
-.post-link { position: relative; }
 
 .tts-inline {
   position: absolute;
@@ -174,7 +170,7 @@ select {
   opacity: 0;
   transition: opacity 0.15s, color 0.15s, border-color 0.15s;
 }
-.post-link:hover .tts-inline { opacity: 1; }
+.fuente-link:hover .tts-inline { opacity: 1; }
 .tts-inline:hover {
   color: var(--fg);
   border-color: #3a3a3a;

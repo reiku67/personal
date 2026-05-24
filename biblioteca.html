@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>biblioteca — w/o fluff</title>
+  <link rel="stylesheet" href="biblioteca.css?v=1">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1><a href="index.html">INOSTROZA</a></h1>
+      <nav class="tabs">
+        <a href="index.html">artículos</a>
+        <a href="biblioteca.html" class="active">biblioteca</a>
+      </nav>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <span class="control-label">orden:</span>
+        <select id="sort">
+          <option value="title-asc">título A→Z</option>
+          <option value="title-desc">título Z→A</option>
+          <option value="autor-asc">autor A→Z</option>
+          <option value="year-desc">año más reciente</option>
+          <option value="year-asc">año más antiguo</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <span class="control-label">tipos:</span>
+        <div class="topics" id="tipos"></div>
+      </div>
+    </div>
+
+    <main id="fuentes"></main>
+  </div>
+
+  <script src="tts.js?v=2"></script>
+  <script src="biblioteca.js?v=1"></script>
+</body>
+</html>

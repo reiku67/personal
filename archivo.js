@@ -4,6 +4,22 @@ function escapeHtml(s) {
   }[c]));
 }
 
+function parseMeta(text) {
+  const meta = {};
+  const lines = text.split('\n');
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (line.trim() === '') { i++; break; }
+    const m = line.match(/^@(\w+):\s*(.*)$/);
+    if (m) meta[m[1]] = m[2].trim();
+    else break;
+    i++;
+  }
+  const body = lines.slice(i).join('\n').trim();
+  return { meta, body };
+}
+
 function renderBody(text) {
   return text.split(/\n\s*\n/)
     .map(b => b.trim())
@@ -19,9 +35,6 @@ function renderBody(text) {
 async function load() {
   const params = new URLSearchParams(location.search);
   const file = params.get('file');
-  const titulo = params.get('titulo') || file;
-  const tipo = params.get('tipo') || 'archivo';
-
   const container = document.getElementById('archivo');
 
   if (!file) {
@@ -39,21 +52,28 @@ async function load() {
     return;
   }
 
+  const { meta, body } = parseMeta(text);
+  const titulo = meta.title || file.split('/').pop();
+  const autor = meta.autor || '';
+  const tipo = (meta.tipo || 'archivo').toUpperCase();
+  const year = meta.year || '';
+
   document.title = titulo + ' — w/o fluff';
 
   container.innerHTML = `
-    <div class="source-banner">${escapeHtml(tipo).toUpperCase()} · FUENTE</div>
+    <div class="source-banner">${escapeHtml(tipo)} · FUENTE</div>
     <h2 class="post-title">${escapeHtml(titulo)}</h2>
+    ${autor ? `<div class="source-author">${escapeHtml(autor)}${year ? ` · ${escapeHtml(year)}` : ''}</div>` : ''}
     <div class="source-meta">
       texto completo · <a href="${file}" download>descargar .txt</a>
     </div>
     <div id="tts-mount"></div>
-    <div class="body">${renderBody(text)}</div>
+    <div class="body">${renderBody(body)}</div>
   `;
 
   createTTSPlayer(
     document.getElementById('tts-mount'),
-    () => `${titulo}. ${text}`
+    () => `${titulo}${autor ? ', de ' + autor : ''}. ${body}`
   );
 }
 

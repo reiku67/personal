@@ -2,6 +2,8 @@
 
 Blog estático en modo oscuro. Sin frameworks, sin dependencias, sin build step.
 
+Dos apartados: **artículos** (lo que escribís) y **biblioteca** (las fuentes que citás).
+
 ## Ejecutar localmente
 
 ```bash
@@ -14,45 +16,71 @@ Abrí http://localhost:8000/
 
 ```
 .
-├── index.html / index.css / index.js   # Portada (lista de publicaciones)
-├── post.html / post.css / post.js      # Una publicación individual
-├── archivo.html / archivo.css / archivo.js  # Visor de fuentes (libros, papers)
-├── tts.js                              # Narración con Web Speech API
-├── posts/                              # Publicaciones (.txt con metadata)
-└── archivos/                           # Fuentes adjuntas (.txt)
+├── index.html / index.css / index.js          # Portada: lista de artículos
+├── biblioteca.html / .css / .js               # Lista de fuentes
+├── articulo.html / .css / .js                 # Ver un artículo
+├── archivo.html / .css / .js                  # Ver una fuente
+├── tts.js                                     # Narración Web Speech API
+├── articulos/                                 # Tus artículos (.txt con header)
+└── archivos/                                  # Fuentes de la biblioteca (.txt con header)
 ```
 
-## Agregar una publicación
+## Agregar un artículo
 
-1. Creá `posts/mi-post.txt`:
-   ```
-   @title: Mi título
-   @date: 2026-05-23
-   @topic: opinion
-   @image:
-   @archivo: archivos/libro.txt
-   @archivo_titulo: Nombre del libro
-   @archivo_tipo: libro
+Creá `articulos/mi-articulo.txt`:
 
-   Acá empieza el cuerpo del post. Párrafos separados por línea en blanco.
+```
+@title: Mi título
+@date: 2026-05-23
+@topic: opinion
+@image:
+@archivo: archivos/libro.txt
 
-   Otro párrafo.
-   ```
+Acá empieza el cuerpo. Párrafos separados por línea en blanco.
 
-2. Recargá la página. Aparece automáticamente.
+Otro párrafo.
+```
 
-Campos del header (todos opcionales menos `@title` y `@date`):
+Recargá. Aparece solo.
+
+**Campos del header:**
+- `@title` — título visible (default: slug del archivo)
+- `@date` — `YYYY-MM-DD`, ordena
+- `@topic` — categoría para filtros (`libro`, `opinion`, `idea`, etc.)
+- `@image` — URL opcional
+- `@archivo` — ruta a una fuente de la biblioteca; aparece como link al final
+
+El título, autor y tipo de la fuente se leen del archivo de la biblioteca — no hay que repetirlos.
+
+## Agregar una fuente a la biblioteca
+
+Creá `archivos/algun-libro.txt` con header:
+
+```
+@title: Fenomenología del Espíritu (extractos)
+@autor: G.W.F. Hegel
+@tipo: libro
+@year: 1807
+
+[texto del libro acá]
+```
+
+**Campos del header:**
 - `@title` — título visible
-- `@date` — fecha (`YYYY-MM-DD`), usada para ordenar
-- `@topic` — categoría para los filtros (`libro`, `opinion`, `idea`, etc.)
-- `@image` — URL opcional de una imagen
-- `@archivo` — ruta a un `.txt` fuente (libro, paper) que se renderiza en su propia página
-- `@archivo_titulo` — título visible del archivo
-- `@archivo_tipo` — etiqueta del banner (default `libro`)
+- `@autor` — autor (aparece en cursiva)
+- `@tipo` — `libro`, `paper`, `articulo`, etc. (filtra y etiqueta)
+- `@year` — año (ordena por más reciente / antiguo)
 
 ## Narración
 
-Cada página tiene un botón 🔊 para escuchar el contenido con Web Speech API del navegador.
+Botón 🔊 en cada artículo, fuente, y al hover en los listados.
 
 - En Chrome/Edge funciona sin setup.
-- En Firefox/Linux necesitás `speech-dispatcher` y `espeak-ng` instalados.
+- En Firefox/Linux: `sudo pacman -S speech-dispatcher espeak-ng`.
+
+## Deploy
+
+Push a `main` dispara el workflow de GitHub Actions, que regenera
+`articulos/index.json` y `archivos/index.json` y deploya a Pages.
+Tenés que tener Pages configurado con **Source: GitHub Actions** en
+Settings → Pages.

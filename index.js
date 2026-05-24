@@ -20,28 +20,25 @@ function parseMeta(text) {
   return { meta, body };
 }
 
-async function discoverPosts() {
-  // Primero: intentar leer posts/index.json (lo genera el workflow de Pages
-  // o se puede mantener a mano). Fallback: parsear el listado de directorio
-  // que sirve Python http.server en local.
+async function discoverArticulos() {
   try {
-    const res = await fetch('posts/index.json');
+    const res = await fetch('articulos/index.json');
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data)) return data.map(s => s.endsWith('.txt') ? s : s + '.txt');
     }
   } catch {}
 
-  const html = await fetch('posts/').then(r => r.text());
+  const html = await fetch('articulos/').then(r => r.text());
   const matches = [...html.matchAll(/href="([^"]+\.txt)"/g)];
   return matches.map(m => decodeURIComponent(m[1]));
 }
 
-async function loadPosts() {
-  const filenames = await discoverPosts();
+async function loadArticulos() {
+  const filenames = await discoverArticulos();
   state.posts = await Promise.all(filenames.map(async filename => {
     const slug = filename.replace(/\.txt$/, '');
-    const text = await fetch(`posts/${filename}`).then(r => r.text());
+    const text = await fetch(`articulos/${filename}`).then(r => r.text());
     const { meta } = parseMeta(text);
     return {
       slug,
@@ -97,7 +94,7 @@ function renderPosts() {
   }
 
   container.innerHTML = filtered.map(p => `
-    <a class="post-link" href="post.html?slug=${encodeURIComponent(p.slug)}" data-slug="${p.slug}">
+    <a class="post-link" href="articulo.html?slug=${encodeURIComponent(p.slug)}" data-slug="${p.slug}">
       <div class="meta">
         <span class="date">${formatDate(p.date)}</span>
         <span class="topic">· ${p.topic}</span>
@@ -106,7 +103,6 @@ function renderPosts() {
     </a>
   `).join('');
 
-  // Insert TTS inline buttons (read title aloud without navigating)
   filtered.forEach(p => {
     const link = container.querySelector(`.post-link[data-slug="${p.slug}"]`);
     if (link) link.appendChild(createTTSInlineButton(`${p.title}. Tópico: ${p.topic}. Fecha: ${formatDate(p.date)}.`));
@@ -118,4 +114,4 @@ document.getElementById('sort').addEventListener('change', e => {
   renderPosts();
 });
 
-loadPosts();
+loadArticulos();

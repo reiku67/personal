@@ -1,5 +1,7 @@
 function formatDate(iso) {
+  if (!iso) return 'sin fecha';
   const d = new Date(iso);
+  if (isNaN(d)) return iso;
   return d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
@@ -33,36 +35,55 @@ function renderBody(text) {
     .join('\n');
 }
 
+async function loadSourceMeta(file) {
+  // Lee el header de un archivo de biblioteca para mostrar título/autor
+  try {
+    const res = await fetch(file);
+    if (!res.ok) return null;
+    const text = await res.text();
+    const { meta } = parseMeta(text);
+    return meta;
+  } catch {
+    return null;
+  }
+}
+
 async function load() {
   const slug = new URLSearchParams(location.search).get('slug');
-  const container = document.getElementById('post');
+  const container = document.getElementById('articulo');
 
   if (!slug) {
-    container.innerHTML = '<div class="empty">publicación no especificada</div>';
+    container.innerHTML = '<div class="empty">artículo no especificado</div>';
     return;
   }
 
-  const text = await fetch(`posts/${slug}.txt`).then(r => {
+  const text = await fetch(`articulos/${slug}.txt`).then(r => {
     if (!r.ok) throw new Error('not found');
     return r.text();
   }).catch(() => null);
 
   if (text === null) {
-    container.innerHTML = '<div class="empty">publicación no encontrada</div>';
+    container.innerHTML = '<div class="empty">artículo no encontrado</div>';
     return;
   }
 
   const { meta, body } = parseMeta(text);
   document.title = (meta.title || slug) + ' — w/o fluff';
 
-  const attachment = meta.archivo
-    ? `<div class="attachment">
-         <div class="attachment-label">${escapeHtml((meta.archivo_tipo || 'libro')).toUpperCase()} CITADO</div>
-         <a href="archivo.html?file=${encodeURIComponent(meta.archivo)}&titulo=${encodeURIComponent(meta.archivo_titulo || meta.archivo)}&tipo=${encodeURIComponent(meta.archivo_tipo || 'libro')}">
-           ${escapeHtml(meta.archivo_titulo || meta.archivo)} →
-         </a>
-       </div>`
-    : '';
+  let attachment = '';
+  if (meta.archivo) {
+    const srcMeta = await loadSourceMeta(meta.archivo);
+    const titulo = (srcMeta && srcMeta.title) || meta.archivo_titulo || meta.archivo;
+    const autor = (srcMeta && srcMeta.autor) ? ` · ${srcMeta.autor}` : '';
+    const tipo = (srcMeta && srcMeta.tipo) || meta.archivo_tipo || 'libro';
+    attachment = `
+      <div class="attachment">
+        <div class="attachment-label">${escapeHtml(tipo).toUpperCase()} CITADO</div>
+        <a href="archivo.html?file=${encodeURIComponent(meta.archivo)}">
+          ${escapeHtml(titulo)}${escapeHtml(autor)} →
+        </a>
+      </div>`;
+  }
 
   container.innerHTML = `
     <div class="meta">
