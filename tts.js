@@ -1,5 +1,8 @@
 // Text-to-speech compartido. Usa Web Speech API del navegador.
 // Para mejor calidad en español: en Chrome/Edge instalá voces neurales del sistema.
+// En Firefox las voces de speech-dispatcher/espeak suenan muy mal, así que ahí no se ofrece.
+
+const TTS_DISABLED = /Firefox\//.test(navigator.userAgent);
 
 const TTS = {
   voices: [],
@@ -124,6 +127,7 @@ const TTS = {
 // Crea una barra de player y la inserta en `container`. `getText` es una
 // función que devuelve el texto a leer (se llama recién al apretar play).
 function createTTSPlayer(container, getText) {
+  if (TTS_DISABLED) return;
   const bar = document.createElement('div');
   bar.className = 'tts-bar';
   bar.innerHTML = `
@@ -183,6 +187,7 @@ function createTTSPlayer(container, getText) {
 
 // Botón inline (sin barra completa) — útil para listados.
 function createTTSInlineButton(text) {
+  if (TTS_DISABLED) return null;
   const btn = document.createElement('button');
   btn.className = 'tts-inline';
   btn.type = 'button';

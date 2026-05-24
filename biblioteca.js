@@ -106,7 +106,9 @@ function renderFuentes() {
 
   filtered.forEach(f => {
     const link = container.querySelector(`.fuente-link[data-file="${f.file}"]`);
-    if (link) link.appendChild(createTTSInlineButton(`${f.title}${f.autor ? ', de ' + f.autor : ''}.`));
+    if (!link) return;
+    const btn = createTTSInlineButton(`${f.title}${f.autor ? ', de ' + f.autor : ''}.`);
+    if (btn) link.appendChild(btn);
   });
 }
 

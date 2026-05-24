@@ -105,7 +105,9 @@ function renderPosts() {
 
   filtered.forEach(p => {
     const link = container.querySelector(`.post-link[data-slug="${p.slug}"]`);
-    if (link) link.appendChild(createTTSInlineButton(`${p.title}. Tópico: ${p.topic}. Fecha: ${formatDate(p.date)}.`));
+    if (!link) return;
+    const btn = createTTSInlineButton(`${p.title}. Tópico: ${p.topic}. Fecha: ${formatDate(p.date)}.`);
+    if (btn) link.appendChild(btn);
   });
 }
 
