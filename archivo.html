@@ -4,18 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>w/o fluff</title>
-  <link rel="stylesheet" href="archivo.css?v=3">
+  <link rel="stylesheet" href="archivo.css?v=23">
 </head>
 <body>
-  <div class="wrap">
-    <a class="back" href="biblioteca.html">← biblioteca</a>
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="abrir índice (Ctrl+K)">
+    <kbd class="nt-key">⌘K</kbd>
+  </button>
+
+  <main class="content">
     <article id="archivo">
       <div class="empty">cargando…</div>
     </article>
+  </main>
+
+  <div class="palette" id="palette" hidden>
+    <div class="palette-backdrop" data-close></div>
+    <div class="palette-box" role="dialog" aria-modal="true" aria-label="índice">
+      <div class="palette-search">
+        <span class="palette-icon">⌕</span>
+        <input id="palette-input" type="text" placeholder="saltar a una sección…"
+               autocomplete="off" spellcheck="false" aria-label="buscar sección">
+        <kbd class="palette-esc">esc</kbd>
+      </div>
+      <nav class="palette-list" id="toc" aria-label="índice"></nav>
+      <div class="palette-empty" hidden>sin coincidencias</div>
+      <a class="palette-back" href="biblioteca.html">← volver a la biblioteca</a>
+    </div>
   </div>
 
-  <script src="scroll-top.js?v=1"></script>
   <script src="tts.js?v=2"></script>
-  <script src="archivo.js?v=7"></script>
+  <script src="archivo.js?v=13"></script>
 </body>
 </html>
