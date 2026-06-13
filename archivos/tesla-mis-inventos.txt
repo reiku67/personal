@@ -1,3 +1,8 @@
+@title: Mis Inventos
+@autor: Nikola Tesla
+@tipo: libro
+@year: 1919
+
 MIS INVENTOS
 La autobiografía de Nikola Tesla
 

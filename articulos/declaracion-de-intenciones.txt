@@ -1,0 +1,5 @@
+@title: Declaración de Intenciones
+@date: 2026-05-23
+@topic: libro
+@image:
+
