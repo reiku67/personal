@@ -3,13 +3,7 @@
 @tipo: libro
 @year: 1919
 
-MIS INVENTOS
-
-======================================================================
-
-CAPÍTULO I
-Mis primeros años
-----------------------------------------------------------------------
+TÍTULO: Capítulo I — Mis primeros años
 
 El desarrollo progresivo del hombre depende de manera vital de la invención. Es el producto más importante de su cerebro creador. Su fin último es el dominio completo de la mente sobre el mundo material, la sujeción de las fuerzas de la naturaleza a las necesidades humanas. Esa es la difícil tarea del inventor, a quien a menudo se malinterpreta y no se recompensa. Pero él encuentra amplia compensación en el grato ejercicio de sus facultades y en saberse parte de esa clase excepcionalmente privilegiada sin la cual la especie habría perecido hace mucho en la amarga lucha contra los elementos despiadados.
 
@@ -53,9 +47,7 @@ Durante otro periodo fumé en exceso, amenazando con arruinar mi salud. Entonces
 
 Tras terminar los estudios en el Instituto Politécnico y en la Universidad, sufrí un completo colapso nervioso, y mientras duró el mal observé muchos fenómenos extraños e increíbles.
 
-CAPÍTULO II
-Mis primeros intentos como inventor
-----------------------------------------------------------------------
+TÍTULO: Capítulo II — Mis primeros intentos como inventor
 
 Me detendré brevemente en estas experiencias extraordinarias, por el posible interés que tengan para los estudiosos de la psicología y la fisiología, y también porque este periodo de agonía fue de la mayor trascendencia para mi desarrollo mental y mis labores posteriores. Pero es indispensable relatar primero las circunstancias y condiciones que las precedieron, y en las que acaso pueda hallarse su explicación parcial.
 
@@ -93,9 +85,7 @@ En el aula había unos cuantos modelos mecánicos que me interesaron y dirigiero
 
 Hice toda clase de otros artilugios e ingenios, pero entre ellos las ballestas que fabriqué fueron las mejores. Mis flechas, al ser disparadas, desaparecían de la vista y a corta distancia atravesaban una tabla de pino de una pulgada de grosor. Por el continuo tensado de los arcos me salió en el estómago una piel muy parecida a la de un cocodrilo, y a menudo me pregunto si será gracias a este ejercicio que aún hoy soy capaz de digerir adoquines. Tampoco puedo pasar en silencio mis proezas con la honda, que me habrían permitido ofrecer una exhibición pasmosa en el Hipódromo. Y ahora referiré una de mis hazañas con esta antigua arma de guerra que pondrá a prueba al máximo la credulidad del lector. Practicaba mientras paseaba con mi tío a orillas del río. Se ponía el sol, las truchas estaban juguetonas y de cuando en cuando una saltaba al aire, su reluciente cuerpo recortado nítidamente contra una roca saliente al fondo. Por supuesto, cualquier chico podría haber acertado a un pez en estas propicias condiciones, pero yo emprendí una tarea mucho más difícil, y predije a mi tío, hasta el más mínimo detalle, lo que pensaba hacer. Iba a lanzar una piedra al encuentro del pez, aplastar su cuerpo contra la roca y cortarlo en dos. Dicho y hecho. Mi tío me miró casi fuera de sí del susto y exclamó «¡Vade retro, Satanás!», y pasaron unos días antes de que volviera a hablarme. Otras marcas, por grandes que sean, serán eclipsadas, pero siento que podría descansar tranquilamente sobre mis laureles durante mil años.
 
-CAPÍTULO III
-Mis empeños posteriores
-----------------------------------------------------------------------
+TÍTULO: Capítulo III — Mis empeños posteriores
 
 El descubrimiento del campo magnético rotatorio
 
@@ -169,9 +159,7 @@ El resplandor se retira, concluida está la jornada de fatiga;
 
 Al pronunciar estas inspiradoras palabras, la idea llegó como un relámpago y en un instante la verdad se reveló. Dibujé con un palo en la arena los diagramas que mostraría seis años después en mi conferencia ante el Instituto Americano de Ingenieros Eléctricos, y mi compañero los entendió a la perfección. Las imágenes que veía eran maravillosamente nítidas y claras y tenían la solidez del metal y la piedra, hasta el punto de que le dije: «Mira aquí mi motor; obsérvame invertir su giro». No puedo siquiera empezar a describir mis emociones. Pigmalión, al ver cobrar vida a su estatua, no pudo conmoverse más hondamente. Mil secretos de la naturaleza con los que habría podido tropezar por azar los habría dado por aquel único que le había arrancado contra toda probabilidad y a riesgo de mi existencia.
 
-CAPÍTULO IV
-El descubrimiento de la bobina y el transformador de Tesla
-----------------------------------------------------------------------
+TÍTULO: Capítulo IV — El descubrimiento de la bobina y el transformador de Tesla
 
 Durante un tiempo me entregué por entero al intenso placer de imaginar máquinas e idear formas nuevas. Era un estado mental de felicidad tan completo como cualquiera que haya conocido en la vida. Las ideas llegaban en una corriente ininterrumpida, y la única dificultad que tenía era retenerlas. Los aparatos que concebía me resultaban absolutamente reales y tangibles en cada detalle, hasta en las menudas marcas y señales de desgaste. Me deleitaba en imaginar los motores funcionando sin cesar, pues de ese modo ofrecían a los ojos de la mente un espectáculo más fascinante. Cuando la inclinación natural se convierte en un deseo apasionado, uno avanza hacia su meta con botas de siete leguas. En menos de dos meses desarrollé prácticamente todos los tipos de motores y las modificaciones del sistema que hoy se identifican con mi nombre. Fue, quizá, providencial que las necesidades de la existencia ordenaran una pausa temporal a esta consumidora actividad de la mente. Llegué a Budapest impulsado por un informe prematuro acerca de la empresa telefónica y, como la ironía del destino lo quiso, tuve que aceptar un puesto de delineante en la Oficina Central de Telégrafos del Gobierno húngaro, ¡con un sueldo que considero mi privilegio no revelar! Por fortuna, pronto me gané el interés del inspector jefe y a partir de entonces se me empleó en cálculos, diseños y presupuestos relativos a nuevas instalaciones, hasta que se puso en marcha la central telefónica, de la que me hice cargo. El conocimiento y la experiencia práctica que adquirí en el curso de este trabajo fueron valiosísimos, y el empleo me dio amplias oportunidades para ejercitar mis facultades inventivas. Introduje varias mejoras en el aparato de la estación central y perfeccioné un repetidor o amplificador telefónico que nunca se patentó ni se describió públicamente, pero que aún hoy me honraría. En reconocimiento de mi eficaz colaboración, el organizador de la empresa, el señor Puskás, al deshacerse de su negocio en Budapest, me ofreció un puesto en París que acepté de buen grado.
 
@@ -199,9 +187,7 @@ A finales de 1889, sin embargo, no siendo ya esenciales mis servicios en Pittsbu
 
 Por muchas otras consideraciones parecía deseable inventar un dispositivo más sencillo para la producción de oscilaciones eléctricas. En 1856 lord Kelvin había expuesto la teoría de la descarga del condensador, pero no se había hecho aplicación práctica alguna de ese importante conocimiento. Yo vi las posibilidades y emprendí el desarrollo de un aparato de inducción basado en este principio. Mi avance fue tan rápido que pude exhibir, en mi conferencia de 1891, una bobina que daba chispas de cinco pulgadas. En aquella ocasión confesé con franqueza a los ingenieros un defecto que entrañaba la transformación por el nuevo método, a saber: la pérdida en el entrehierro de la chispa. Una investigación posterior demostró que, sea cual sea el medio empleado —aire, hidrógeno, vapor de mercurio, aceite o una corriente de electrones—, el rendimiento es el mismo. Es una ley muy parecida a la que rige la conversión de la energía mecánica. Podemos dejar caer un peso desde cierta altura verticalmente hacia abajo, o llevarlo al nivel inferior por cualquier camino tortuoso; es indiferente en lo que respecta a la cantidad de trabajo. Por fortuna, sin embargo, este inconveniente no es fatal, pues con una proporción adecuada de los circuitos resonantes se alcanza un rendimiento del 85 por ciento. Desde mi temprano anuncio de la invención, esta ha entrado en uso universal y ha obrado una revolución en muchos ramos. Pero le aguarda un futuro aún mayor. Cuando en 1900 obtuve poderosas descargas de cien pies e hice circular una corriente alrededor del globo, recordé la primera diminuta chispa que observé en mi laboratorio de la calle Grand y me estremecí con sensaciones afines a las que sentí cuando descubrí el campo magnético rotatorio.
 
-CAPÍTULO V
-El transmisor amplificador
-----------------------------------------------------------------------
+TÍTULO: Capítulo V — El transmisor amplificador
 
 Al repasar los acontecimientos de mi vida pasada, comprendo cuán sutiles son las influencias que moldean nuestro destino. Un incidente de mi juventud puede servir de ilustración. Un día de invierno logré trepar a una montaña escarpada, en compañía de otros chicos. La nieve era bastante profunda y un cálido viento del sur la había dejado justo apropiada para nuestro propósito. Nos divertíamos arrojando bolas que rodaban cierta distancia, recogiendo más o menos nieve, y tratábamos de superarnos unos a otros en este emocionante juego. De pronto se vio que una bola sobrepasaba el límite, hinchándose hasta proporciones enormes, hasta volverse tan grande como una casa, y se precipitó atronando al valle de abajo con una fuerza que hizo temblar el suelo. Yo miraba como hechizado, incapaz de comprender lo que había sucedido. Durante semanas tuve ante los ojos la imagen del alud, y me preguntaba cómo algo tan pequeño podía crecer hasta un tamaño tan inmenso. Desde entonces, la amplificación de acciones débiles me fascinó, y cuando, años más tarde, emprendí el estudio experimental de la resonancia mecánica y eléctrica, me interesé vivamente desde el primer momento. Es posible que, de no haber sido por aquella poderosa impresión temprana, no hubiera dado seguimiento a la pequeña chispa que obtuve con mi bobina y nunca hubiese desarrollado mi mejor invención, cuya verdadera historia contaré aquí por primera vez.
 
@@ -249,9 +235,7 @@ La torre fue destruida hace dos años, pero mis proyectos siguen desarrollándos
 
 Añadiría además, en vista de varios rumores que han llegado a mí, que el señor J. Pierpont Morgan no se interesó en mí de manera mercantil, sino con el mismo espíritu generoso con que ha auxiliado a tantos otros pioneros. Cumplió al pie de la letra su generosa promesa, y habría sido del todo irrazonable esperar de él algo más. Tenía la más alta consideración por mis logros y me dio toda muestra de su completa fe en mi capacidad para lograr al fin lo que me había propuesto. No estoy dispuesto a conceder a ciertos individuos mezquinos y celosos la satisfacción de haber frustrado mis esfuerzos. Estos hombres no son para mí más que microbios de una enfermedad repugnante. Mi proyecto se vio retrasado por las leyes de la naturaleza. El mundo no estaba preparado para él. Se adelantaba demasiado a su tiempo. Pero esas mismas leyes prevalecerán al final y lo convertirán en un éxito triunfal.
 
-CAPÍTULO VI
-El arte de la telautomática
-----------------------------------------------------------------------
+TÍTULO: Capítulo VI — El arte de la telautomática
 
 Ningún tema al que jamás me haya dedicado ha exigido tal concentración de la mente ni ha forzado hasta grado tan peligroso las más finas fibras de mi cerebro como el sistema cuyo fundamento es el transmisor amplificador. Puse toda la intensidad y el vigor de la juventud en el desarrollo de los descubrimientos del campo rotatorio, pero aquellas labores tempranas eran de carácter distinto. Aunque extremadamente arduas, no entrañaban ese discernimiento agudo y extenuante que hubo de ejercerse al atacar los muchos desconcertantes problemas de la transmisión sin hilos. Pese a mi rara resistencia física en aquel periodo, los nervios maltratados acabaron por rebelarse y sufrí un completo colapso, justo cuando la consumación de la larga y difícil tarea estaba casi a la vista.
 
@@ -306,8 +290,6 @@ Estos autómatas, controlados dentro del alcance de la vista del operador, fuero
 Como dije en una ocasión anterior, cuando era estudiante en el colegio concebí una máquina voladora muy distinta de las actuales. El principio subyacente era sólido, pero no pudo llevarse a la práctica por falta de un motor primario de actividad suficientemente grande. En años recientes he resuelto con éxito este problema y ahora proyecto máquinas aéreas desprovistas de planos sustentadores, alerones, hélices y otros aditamentos externos, que serán capaces de velocidades inmensas y que muy probablemente brindarán poderosos argumentos en favor de la paz en un futuro próximo. Tal máquina, sostenida y propulsada enteramente por reacción, se muestra en la página 108 y se supone controlada bien mecánicamente, bien por energía inalámbrica. Instalando las plantas adecuadas, será factible proyectar un proyectil de esta clase al aire y hacerlo caer casi sobre el punto exacto señalado, que puede estar a miles de millas de distancia. Pero no vamos a detenernos aquí. Acabarán por producirse telautómatas capaces de actuar como si poseyeran su propia inteligencia, y su advenimiento creará una revolución. Ya en 1898 propuse a los representantes de una gran empresa fabril la construcción y exhibición pública de un carruaje automóvil que, abandonado a sí mismo, ejecutaría una gran variedad de operaciones que entrañarían algo semejante al juicio. Pero mi propuesta se juzgó quimérica en aquel tiempo y nada salió de ella.
 
 En la actualidad, muchas de las mentes más capaces tratan de idear expedientes para impedir la repetición del espantoso conflicto que solo en teoría ha terminado, y cuya duración y principales desenlaces he predicho correctamente en un artículo publicado en el Sun del 20 de diciembre de 1914. La liga propuesta no es un remedio, sino que, al contrario, en opinión de varios hombres competentes, puede producir resultados justamente opuestos. Es particularmente lamentable que se adoptara una política punitiva al redactar los términos de la paz, porque dentro de unos años será posible que las naciones combatan sin ejércitos, barcos ni cañones, con armas mucho más terribles, a cuya acción destructiva y alcance no hay prácticamente límite. Una ciudad, a cualquier distancia del enemigo, puede ser destruida por este, y ningún poder en la Tierra podrá impedírselo. Si queremos evitar una calamidad inminente y un estado de cosas que pueda transformar este globo en un infierno, debemos impulsar el desarrollo de las máquinas voladoras y la transmisión inalámbrica de energía sin un instante de demora y con todo el poder y los recursos de la nación.
-
-======================================================================
 
 Mis inventos (título original: My Inventions: The Autobiography of
 Nikola Tesla), de Nikola Tesla. Publicado originalmente en seis

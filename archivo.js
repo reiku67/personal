@@ -45,9 +45,13 @@ function renderBody(text) {
         const t = titleMatch[1].trim();
         return `<h3 id="${mkId(t)}">${escapeHtml(t)}</h3>`;
       }
-      // Línea suelta en mayúsculas (p. ej. INTRODUCCIÓN) → encabezado de sección
+      // Línea suelta en mayúsculas (p. ej. INTRODUCCIÓN) → encabezado de sección.
+      // Se excluyen las que terminan en signo de puntuación de frase/saludo
+      // (p. ej. "EXCELENCIA:", "MEYER AMSCHEL ROTHSCHILD.") para no confundir
+      // los saludos y firmas de cartas con títulos.
       const isHeading = !b.includes('\n') && b.length <= 60 &&
-        /[A-ZÁÉÍÓÚÑÜ]/.test(b) && b === b.toUpperCase();
+        /[A-ZÁÉÍÓÚÑÜ]/.test(b) && b === b.toUpperCase() &&
+        !/[.,:;!?¡¿]$/.test(b);
       if (isHeading) return `<h3 id="${mkId(b)}">${escapeHtml(b)}</h3>`;
       return `<p>${escapeHtml(b).replace(/\n/g, '<br>')}</p>`;
     })

@@ -3,3 +3,6 @@
 @topic: libro
 @image:
 
+Acá dejo una biblioteca personal de libros a los cuales no he podido encontrar traduccion, o las que habian, ademas de la traduccion habian un monton de texto del traductor, notas del editor, introducciones eternas. En fin, que al final quiero ir a la cosa misma sin introducciones. Ademas de una interfaz simple para leer. 
+
+Estoy cansado de tanto textos basura y basura en los textos que si valen la pena.
